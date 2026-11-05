@@ -1,0 +1,3 @@
+Proyecto base de calculadora creado por Jomar (TheColdPrince).
+Repositorio: https://github.com/TheColdPrince/Calculator-for-MIT
+El repositorio incluye una licencia GNU GPL v3, que se incluye dentro del archivo AIA.
