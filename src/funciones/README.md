@@ -147,17 +147,38 @@ def resta (a,b):
 
 ==================================================================================================
 
-sube
+### type-hints(anotaciones de tipo)
+Las anotaciones de tipo (type hints) indican qué tipo de dato se espera en los parámetros y qué tipo devuelve una función. Ayudan a que el código sea más fácil de entender y permiten que editores y herramientas como Pylance detecten posibles errores.
+ para utilizarlos debemos indicarel tipo de dato despues del separador `:`
+ en el caso del valor de retorno usaremos  `_>`
+ que indica el inicio del bloque de codigo de la funcion:
+ las `anotaciones d tipo` son una herramienta 
+ que nos permite complementar la documentacion de nuestro codigo.
 
+**tenemos los siguiente**😇
+- **Simples**
+ - int _> numeros enteros
+ - float _> numeros decimales.
+ - bool _> datos boleanos (verdad o falso)
+ - str _> datos de tipo texto o cadenas
+ - list _> listas `[]`
+ - tuple -> tuplas `()`
+ - dict -> diccionario `{}`😎
+  
+-  *** compuesto ***
+-  existen casoos en los que necesitamos mas expresividad en la `anotacion de tipos` 
+-  >[!WARNING]¿que ocurre si queremos indicar una lista de `cadenas` o un conjunto de `enteros`?😤
+  
+  - list[str] -> lista de cadenas de texto
+  - list [int] -> lista de numeros enteros
+  - dict [str,float] ->diccionario donde las claves son cadenas de texto y los valores son numeros decimales
 
+- *** Multiples ***🫣
+- en el caso que queramos indicar de un determinado parametro puede ser de un `tipo o de otro`  tenemos que especificar usando el operados `|` 
 
-
-
-
-
-
-
-
+  - tuple|dict ->pudes datos de tipo duplas o diccionario
+  - list[str|int] -> lista cuyos elementos pueden ser cadenas de texto o enteros
+  - dict[str|int,float|int] -> diccionario cuya clave puede ser entero o texto y el valor pude ser flotante o entero
 
 
 
