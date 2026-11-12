@@ -180,5 +180,11 @@ Las anotaciones de tipo (type hints) indican qué tipo de dato se espera en los 
   - list[str|int] -> lista cuyos elementos pueden ser cadenas de texto o enteros
   - dict[str|int,float|int] -> diccionario cuya clave puede ser entero o texto y el valor pude ser flotante o entero
 
-
-
+### closure 
+son `closure` `clausaura` son funciones que establecen una funcion interno, o retornan una funcion estas funciones se caracterizan por reddactar el valor del argumento que sel le pas .
+```python
+def pruducto(n):
+    def multiplicador(m):
+        return n*m
+    return multiplicador
+```
