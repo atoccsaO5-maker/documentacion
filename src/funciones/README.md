@@ -219,4 +219,5 @@ filter(lambda n:x% 2== 0)
 >[!WARNING] nota importate
 > tanto `map()` como `filter()` no devuelve listas dirctamente ,sino iteradores. esto es para ahorrar memoria (evalucacio o lazy evaluation) ,. si quires ver el resultado como una lista tradicional , siempre debes envolver en `list()`.
 
+ ## listas por comprencion
  
