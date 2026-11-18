@@ -210,14 +210,76 @@ def f(x):
  map(lambda x:x**2,numeros)
 ```
 ### 2. filter ()
-asa cada elementos de una colleciion de una funcion y solo se queda con aquellos elementos donde la funcion devuelve tru (esdecir ,filtra los datos sugun una condicion).
+asa cada elementos de una collecion de una funcion y solo se queda con aquellos elementos donde la funcion devuelve tru (esdecir ,filtra los datos sugun una condicion).
 ```python
 ## imagina qu tienes una lista de numeros y solo quieres quedarte con los numeros pares.
 numeros:list[int]=[2,7,5,9,8,6,4,3,11,13,12,193]
 filter(lambda n:x% 2== 0)
 ```
 >[!WARNING] nota importate
-> tanto `map()` como `filter()` no devuelve listas dirctamente ,sino iteradores. esto es para ahorrar memoria (evalucacio o lazy evaluation) ,. si quires ver el resultado como una lista tradicional , siempre debes envolver en `list()`.
+> tanto `map()` como `filter()` no devuelve listas dirctamente ,sino iteradores. esto es para ahorrar memoria (evalucacion o lazy evaluation) ,. si quires ver el resultado como una lista tradicional , siempre debes envolver en `list()`.
 
- ## listas por comprencion
- 
+ ## Listas por comprensión
+
+Las listas por comprensión permiten crear una nueva lista de forma breve y legible. Esta técnica recorre un iterable, aplica una expresión a cada elemento y, opcionalmente, filtra los elementos con una condición.
+
+Su estructura general es:
+
+```python
+[nueva_expresion for elemento in iterable if condicion]
+```
+
+- `nueva_expresion`: indica qué dato se añadirá a la nueva lista.
+- `elemento`: representa cada valor obtenido del iterable.
+- `iterable`: puede ser una lista, tupla, rango u otra colección.
+- `if condicion`: es opcional y solo conserva los elementos que cumplen la condición.
+
+```python
+numeros = [1, 2, 3, 4, 5]
+
+cuadrados = [numero**2 for numero in numeros]
+pares = [numero for numero in numeros if numero % 2 == 0]
+pares_por_diez = [numero * 10 for numero in numeros if numero % 2 == 0]
+
+print(cuadrados)
+print(pares)
+print(pares_por_diez)
+```
+
+Resultados:
+
+```text
+[1, 4, 9, 16, 25]
+[2, 4]
+[20, 40]
+```
+
+## Diccionarios por comprensión
+
+Los diccionarios por comprensión permiten crear un diccionario a partir de un iterable. Cada elemento produce una clave y un valor.
+
+Su estructura general es:
+
+```python
+{clave: valor for elemento in iterable if condicion}
+```
+
+- `clave`: identifica cada elemento dentro del diccionario.
+- `valor`: contiene la información asociada a la clave.
+- `if condicion`: es opcional y permite seleccionar qué elementos se incluyen.
+
+```python
+numeros = [1, 2, 3, 4, 5]
+cuadrados = {numero: numero**2 for numero in numeros}
+pares_cuadrados = {numero: numero**2 for numero in numeros if numero % 2 == 0}
+
+print(cuadrados)
+print(pares_cuadrados)
+```
+
+Resultados:
+
+```text
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+{2: 4, 4: 16}
+```
